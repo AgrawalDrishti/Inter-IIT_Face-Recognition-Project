@@ -83,7 +83,7 @@ nav button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #472183;
+    background-color: #c7c6ca;
     column-gap: 30px;
     
 }
@@ -204,7 +204,7 @@ form{
 
 .field button{
     color:#fff;
-    background-color:#624F82;
+    background-color:#3e3e3e;
     transition: all 0.3s ease;
     cursor: pointer;
 }
