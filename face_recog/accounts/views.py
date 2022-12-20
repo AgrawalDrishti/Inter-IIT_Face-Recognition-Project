@@ -15,7 +15,7 @@ from .forms import *
 def home(request):
 
     context = {}
-    return render(request, 'home.html', context )
+    return render(request, 'homePage.html', context )
 
 def teacherRegister(request):
 

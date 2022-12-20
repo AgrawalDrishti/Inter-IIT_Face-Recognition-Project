@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,16 +6,115 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' href="{% static 'css/settings.css' %}">
+    {% comment %} <script src='main.js'></script> {% endcomment %}
 </head>
 <body>
+    <header>
+        <h1 class="name">Look<span class="py">Up</span></h1>
+        <nav>
+            <div class="left">
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div class="left">
+                <a href="#">About us</a>
+            </div>
+            <div class="left">
+                <a href="#">Help</a>
+            </div>
+            <div class="left">
+                <a href="#">Settings</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="accountHead">
+        <h1>Account Details</h1>
+    </div>
     <style>
         .profile-pic {
-            max-width: 200px;
-            max-height: 200px;
-            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
             border-radius: 50%;
+        }
+        .row{
+            border-radius: 6px;
+            height: 550px;
+            width : 500px;
+            border: 1px solid #CACACA;
+            background: #fff;
+            margin-left: 500px;
+        }
+
+        p{
+            color: rgb(4, 40, 117);
+            padding-left: 30px;
+            font-size: 18px;
+        }
+
+        p a{
+            text-decoration: none;
+        }
+
+        label{
+            font-size: 20px;
+            color: rgb(39, 39, 157);
+            font-weight: bold;
+            padding-right: 20px;
+            /* border: solid grey; */
+        }
+
+        #id_name{
+            font-size: 15px;
+            height: 30px;
+            border: solid rgb(233, 228, 228);
+            width: 360px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #id_phone{
+            font-size: 15px;
+            height: 30px;
+            border: solid rgb(233, 228, 228);
+            width: 358px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #id_email{
+            font-size: 15px;
+            height: 30px;
+            border: solid rgb(233, 228, 228);
+            width: 360px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        select{
+            font-size: 15px;
+            margin-left: 10px;
+            align-items: center;
+            text-align: center;
+            height: 35px;
+            width: 370px;
+            border: solid rgb(233, 228, 228);
+            border-radius: 10px;
+        }
+
+        option{
+            border: solid rgb(233, 228, 228);
+        }
+
+        input[type="file"]{
+            width: 270px;
+        }
+
+        #id_profile_pic{
+            margin-left: 30px;
+            height: 30px;
+            width: 260px;
         }
     </style>
     
@@ -22,10 +122,6 @@
     <div class="row">       
         <div class="col-md-3">
             <div class="card card-body">
-                <a class="btn btn-warning" href="{% url 'dashboard' %}"> &#8592; Back to Dashboard</a>
-                <hr>
-                <h3 style="text-align: center">Account Settings</h3>
-                <hr>
                 <img class="profile-pic" src="{{request.user.teacher.profile_pic.url}}">
     
             </div>
@@ -37,7 +133,7 @@
                     {% csrf_token %}
                     {{form.as_p}}
     
-                    <input class="btn btn-primary" type="submit" name="Update Information">
+                    <input class="btn btn-primary" type="submit" name="Update Information" style="width: 380px; height: 40px; margin-left: 60px; font-size: 25px; background-color: rgb(185, 184, 184); border-radius: 10px; border: transparent;text-align: center;">
                 </form>
             </div>
         </div>
