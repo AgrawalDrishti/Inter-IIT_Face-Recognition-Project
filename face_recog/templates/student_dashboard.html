@@ -1,5 +1,99 @@
-<h1>student dashboard</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+</head>
+<body>
+    <style>
+        .myHeading{
+            height: 100px;
+            width: 100%;
+            background-color: grey;
+            text-align: center;
+        }
+        .myHeading h1{
+            padding-top: 10px;
+            margin-top: 0px;
+            font-size: 50px;
+        }
 
-<p>Hi {{ request.user }}</p>
+        .remaining{
+            background-color: rgb(234, 234, 234);
+            height: 542px;
+            width: 100%;
+        }
+        .remaining p{
+            margin-top: 0px;
+        }
 
-<span><a href="{% url 'studentaccount' %}">Settings</a></span>
+        .updateButton{
+            height: 100px;
+            width: 350px;
+            padding: 15px 25px;
+            font-size: 30px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #0430aa;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            margin-left: 600px;
+            margin-top: 100px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .updateButton:hover {background-color: #07bddd}
+
+        .updateButton:active {
+            background-color: #35bdeb;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .updateButton a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+    </style>
+    <header>
+        <h1 class="name">Look<span class="py">Up</span></h1>
+        <nav>
+            <div class="left">
+                <a href="{% url 'home' %}">Home</a>
+            </div>
+            <div class="left">
+                <a href="#">About us</a>
+            </div>
+            <div class="left">
+                <a href="#">Help</a>
+            </div>
+            <div class="left">
+                <a href="#">Settings</a>
+            </div>
+        </nav>
+    </header>
+    <!-- <h1>student dashboard</h1> -->
+    <div class="myHeading">
+        <h1>Registered as {{request.user}}!!</h1>
+    </div>
+    <div class="remaining">
+        <marquee direction="right" behavior="alternate" style="border:transparent ; height: 100px; font-size: 40px; padding-top: 20px; color: rgb(153, 79, 6);font-family: cursive;">
+            Update your profile.
+        </marquee>
+        <button class="updateButton"><a href="{% url 'studentaccount' %}">Go to profile</a></button>
+        
+    </div>
+
+    
+     
+   
+</body>
+</html>
