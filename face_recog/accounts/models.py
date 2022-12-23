@@ -16,3 +16,5 @@ class Teacher(models.Model):
     profile_pic = models.ImageField(default="profile_photo.png", null=True, blank=True)
 
 # Create your models here.
+# class Attendance(models.Model):
+    

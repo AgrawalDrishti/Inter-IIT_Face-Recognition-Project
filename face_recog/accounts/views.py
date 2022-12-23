@@ -15,6 +15,12 @@ from .models import *
 from .forms import *
 # from .decorators import allowed_users
 # from .filters import OrderFilter 
+import js2py
+
+from temp import *
+
+from Naked.toolshed.shell import execute_js, muterun_js
+result = execute_js('index.js')
 
 def home(request):
 
@@ -64,6 +70,7 @@ def studentRegister(request):
     return render(request, 'student_register.html', context )
 
 def teacherLogin(request):
+    
 
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -88,7 +95,7 @@ def dashboard(request):
 
     context = {}
     # return render(request, 'dashboard.html', context )
-    return redirect('http://localhost:2000/')
+    return redirect('http://localhost:8000/')
 
 def student_dashboard(request):
 
@@ -124,7 +131,7 @@ def StudentaccountSettings(request):
 #     context = {}
 #     return render(request, 'login.html', context )
 
-def uwu(request):
+def facerecog(request):
     
     with open('database.db') as f:
         data = f.read()
@@ -159,7 +166,7 @@ def uwu(request):
                     print("welcome", y[len(y)-2])
                     # return HttpResponse("Welcome")
                     const2 = 0;
-                    context = {}
+                    context = {'name' : y[len(y)-2]}
                     with open('database.db', 'w') as f:
                         pass
                     os.remove(f'{latestimage}')

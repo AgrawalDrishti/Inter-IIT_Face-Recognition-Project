@@ -16,7 +16,7 @@ async function getData() {
     //const dateString = new Date(item.timestamp).toLocaleString();
     //date.textContent = dateString;
     image.src = "/img/" + item.image_file;
-    image.alt = "Profile Photo Uploaded.";
+    image.alt = "Attendance Verified.";
 
     root.append(name, geo, date, image);
     document.body.append(root);

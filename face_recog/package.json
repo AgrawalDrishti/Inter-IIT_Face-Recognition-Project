@@ -1,10 +1,10 @@
 {
-  "name": "module2",
-  "version": "1.0.0",
+  "name": "browserify",
+  "version": "0.1.0",
   "description": "This is the data selfie app by Joey Lee.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "browserify index.js -o bundle.js"
   },
   "keywords": [
     "example",
@@ -14,7 +14,16 @@
   "author": "Dipam Sen",
   "license": "MIT",
   "dependencies": {
+    "browserify-shim": "^3.8.16",
     "express": "^4.16.4",
-    "nedb": "^1.8.0"
+    "my-node-modules": "^0.0.1",
+    "nedb": "^1.8.0",
+    "node-module": "^2.0.0",
+    "node-modules": "^1.0.1",
+    "save": "^2.9.0",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0"
   }
 }
