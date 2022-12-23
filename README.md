@@ -42,7 +42,7 @@ After setup completed run - python main.py to run project.
 
 # To Access The Working WebSite
 
---> Clone the repository:
+-> Clone the repository:
 	
 
 2. Checkout from the main branch
