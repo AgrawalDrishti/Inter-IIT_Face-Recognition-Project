@@ -39,3 +39,10 @@ chooses select python- select interpreter then chooses to enter the interpreter 
 In venv to script then choose python.exe file. Now reload the terminal and install opencv,tkinter, and pillow by pip install.
 
 After setup completed run - python main.py to run project.
+
+# To Access The Working WebSite
+
+--> Clone the repository:
+	
+
+2. Checkout from the main branch
