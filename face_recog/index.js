@@ -4,7 +4,7 @@ const Datastore = require("nedb");
 const fs = require("fs");
 
 const app = express();
-app.listen(8000, () => console.log("listening at 8000"));
+app.listen(3000, () => console.log("listening at 3000"));
 app.use(express.static("public"));
 app.use("/img", express.static("tobeverified"));
 app.use(express.json({ limit: "1mb" }));

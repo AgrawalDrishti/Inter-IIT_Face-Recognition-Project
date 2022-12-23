@@ -20,7 +20,7 @@ import js2py
 from temp import *
 
 from Naked.toolshed.shell import execute_js, muterun_js
-result = execute_js('index.js')
+
 
 def home(request):
 
@@ -95,7 +95,7 @@ def dashboard(request):
 
     context = {}
     # return render(request, 'dashboard.html', context )
-    return redirect('http://localhost:8000/')
+    return redirect('http://localhost:3000/')
 
 def student_dashboard(request):
 
