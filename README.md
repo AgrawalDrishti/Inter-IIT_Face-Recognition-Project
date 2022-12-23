@@ -43,6 +43,25 @@ After setup completed run - python main.py to run project.
 # To Access The Working WebSite
 
 -> Clone the repository:
-	
+	git clone https://github.com/AgrawalDrishti/Inter-IIT_Face-Recognition-Project.git
 
-2. Checkout from the main branch
+-> Checkout from the main branch:
+	git checkout node-django-branch
+	
+-> Activate Virtual Environment:
+	Scripts/activate
+
+-> Install the Requirements:
+	pip install -r requirements.txt
+	
+## You are ready!
+
+-> Run the django server:
+	python manage.py runserver
+	
+-> In a different terminal run:
+	node index.js
+	
+-> Go to 127.0.0.1:8000 and use our website!
+
+
