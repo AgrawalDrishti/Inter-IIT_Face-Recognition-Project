@@ -1,5 +1,4 @@
-# Inter-IIT_Face-Recognition-Project
-#WEBSITE REQUIREMENTS
+# WEBSITE REQUIREMENTS
 
 The complete site is built on django framework
 
